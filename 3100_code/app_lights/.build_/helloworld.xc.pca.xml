@@ -1,0 +1,44 @@
+<preCompilationAnalysis file="../helloworld.xc">
+<fDef name="delay_microseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_milliseconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="delay_seconds" global="true" noreturn="false" doNotSpecialize="true" numParams="1"/>
+<fDef name="foo" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fDef name="main" global="true" noreturn="false" doNotSpecialize="false" numParams="0"/>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_ticks_longlong" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="unknown"/>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_milliseconds" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1000"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="delay_milliseconds" global="true" numArgs="1">
+  <arg num="0">
+    <values>
+      <value type="intval"><intval isSigned="true" val="1000"/></value>
+    </values>
+  </arg>
+</fCall>
+<fCall name="foo" global="true" numArgs="0">
+</fCall>
+</preCompilationAnalysis>
