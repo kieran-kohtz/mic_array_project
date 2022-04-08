@@ -10,17 +10,11 @@
 
 BUILD_FLAGS = -O2 -g -DDEBUG_PRINT_ENABLE=1 -report
 
-# XCOREAI ?= 0
 # The TARGET variable determines what target system the application is
 # compiled for. It either refers to an XN file in the source directories
 # or a valid argument for the --target option when compiling.
-# ifeq ($(XCOREAI),0)
-# XCC_FLAGS_xs2 = $(BUILD_FLAGS)
-# TARGET = XCORE-200-EXPLORER
-# else
-# XCC_FLAGS_xcoreai = $(BUILD_FLAGS)
-# TARGET = XCORE-AI-EXPLORER
-# endif
+
+XCC_FLAGS = $(BUILD_FLAGS)
 
 TARGET = 3100_config.xn
 
@@ -30,15 +24,13 @@ TARGET = 3100_config.xn
 
 APP_NAME =
 
-
 # The USED_MODULES variable lists other module used by the application.
 
 USED_MODULES = lib_i2c
-# USED_MODULES = lib_i2c(>=6.0.0) lib_logging(>=2.1.0)
 
 #=============================================================================
 # The following part of the Makefile includes the common build infrastructure
 # for compiling XMOS applications. You should not need to edit below here.
 
-XMOS_MAKE_PATH ?= ../../../..
+XMOS_MAKE_PATH ?= ../..
 include $(XMOS_MAKE_PATH)/xcommon/module_xcommon/build/Makefile.common
